@@ -30,4 +30,4 @@ COPY . .
 # CMD gunicorn accounting.wsgi:application --bind 0.0.0.0:$PORT
 # CMD chmod +x manage.py
 # CMD python manage.py runserver 0.0.0.0:8000
-CMD gunicorn accounting.wsgi:application --bind 0.0.0.0:8000 --log-level info --timeout 180  --workers 3
+CMD web:gunicorn accounting.wsgi:application
