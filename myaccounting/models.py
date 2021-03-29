@@ -1,5 +1,4 @@
 from django.db import models
-from .test_account_info import client
 
 class Expense(models.Model):
     name = models.CharField(max_length=200)
@@ -28,5 +27,3 @@ class OtherFinancials(models.Model):
 class AccountInfo(models.Model):
     bitcoin = models.CharField(max_length=200)
     etherum = models.CharField(max_length=200)
-
-accountinfo = AccountInfo.objects.create(etherum=client.get_asset_balance(asset='ETH'), bitcoin=client.get_asset_balance(asset='BTC'))
