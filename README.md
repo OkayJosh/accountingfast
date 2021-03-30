@@ -9,5 +9,5 @@ Running on local env
 
 On completion of the command go to 
 
-```0.0.0.0:0000```
+```0.0.0.0:8000```
 
